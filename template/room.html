@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+    <title>ChatVibe Chat</title>
+    <link rel="icon" href="{% static 'image/icon.png' %}">
+</head>
+
+<body>
+
+    <h2 class="chatvibe">ChatVibe<span class="roomname"> - {{room}}</span></h2>
+    <div id="display">
+    </div>
+    <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: "/getMessages/{{room}}",
+                    success: function (response) {
+                        console.log(response);
+                        $("#display").empty();
+                        for (var key in response.messages) {
+                            var timestamp = response.messages[key].date;
+
+                            if (timestamp) {
+                                var dateObj = new Date(timestamp);
+                                var formattedDate = dateObj.toLocaleString();
+
+                                var temp = "<div class='container darker'><b>" +
+                                    response.messages[key].user + "</b><p>" +
+                                    response.messages[key].value +
+                                    "</p><span class='time-left'>" +
+                                    formattedDate + "</span></div>";
+                                $('#display').append(temp);
+                            } else {
+                                console.error("Invalid or undefined timestamp:", timestamp);
+                            }
+                        }
+                    },
+                    error: function (response) {
+                        alert('An error occurred');
+                    }
+                });
+            }, 1000);
+        });
+    </script>
+
+    <div class="container">
+        <form id="post-form">
+            {% csrf_token %}
+            <input type="hidden" name="username" id="username" value="{{username}}" />
+            <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}" />
+            <input class="room-text" type="text" name="message" id="message" width="100px" />
+            <input class="send-btn" type="submit" value="Send">
+        </form>
+    </div>
+
+
+</body>
+
+<script type="text/javascript">
+    $(document).on('submit', '#post-form', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/send',
+            data: {
+                username: $('#username').val(),
+                room_id: $('#room_id').val(),
+                message: $('#message').val(),
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+            },
+            success: function (data) {
+                //alert(data)
+            }
+        });
+        document.getElementById('message').value = ''
+    });
+</script>
+
+</html>
