@@ -17,7 +17,7 @@
     <section id="home">
         <div class="image">
             <div class="login-form">
-                <h1>JOIN ROOM</h1>
+                <h1>JOIN MEETING</h1>
                 <form action="{% url 'join_room' %}" method="POST">
                     {% csrf_token %}
                     <input type="text" placeholder="Enter room ID" name="roomID">

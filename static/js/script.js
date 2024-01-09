@@ -36,15 +36,8 @@ function validateForm() {
     var roomName = document.getElementById("room_name").value;
     var username = document.getElementById("username").value;
 
-    var alphaRegex = /^[A-Za-z\s]+$/;
-
     if (roomName.trim() === '' || username.trim() === '') {
         alert("Please fill in both Room Name and Username fields");
-        return false;
-    }
-
-    if (!alphaRegex.test(roomName) || !alphaRegex.test(username)) {
-        alert("No special characters such as '/._ are allowed. ");
         return false;
     }
 
