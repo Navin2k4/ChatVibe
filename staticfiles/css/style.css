@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat+Alternates:wght@300&family=Open+Sans&family=Pacifico&family=Satisfy&display=swap');
+
+.navbar-nav .nav-item,
+.welcome-content a,
+.card,
+.footer ul li,
+.footer ul li a,
+.footer p {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.navbar-brand,
+.chatvibe {
+    font-family: 'Pacifico', cursive;
+}
+
+.title-txt,
+.welcome-content h3,
+.welcome-content h2,
+#features h2,
+.feature-para,
+.carousel-caption h5,
+.price,
+.price-btn
+{
+	font-family: 'Merriweather',serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: auto;
+}
+
+.navbar-nav {
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-item {
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.navbar {
+    z-index: 1000;
+    position: static;
+}
+
+.image-container {
+    position: relative;
+}
+
+.landing-img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.title-txt {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: fit-content;
+}
+
+
+.main-btn {
+    margin: 0px 10px;
+}
+
+.chat-img {
+    width: 100%;
+}
+
+.welcome-content {
+    width: 100%;
+    text-align: center;
+    padding: 15px 30px 20px 30px;
+}
+
+.welcome-content h3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+    padding-bottom: 30px;
+    margin: 20px 0;
+}
+
+.welcome-content h2 {
+
+    font-size: 2rem;
+    padding: 20px 0;
+    margin: 20px 0;
+}
+
+.welcome-content a {
+    background-color: rgb(13, 13, 167);
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.welcome-content a:hover {
+    background-color: rgb(51, 51, 247);
+    color: aliceblue;
+    box-shadow: 0px 8px 14px 0px rgb(13, 13, 167);
+}
+
+
+#features {
+    background-color: #ecf5fc;
+    padding: 0px 0;
+    text-align: center;
+}
+
+#features h2 {
+    font-weight: 600;
+
+    padding: 30px;
+}
+
+.feature-para {
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    padding: 10px 50px;
+}
+
+.carousel {
+    border-radius: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 110px;
+
+}
+
+video {
+    border-radius: 25px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.carousel-para {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    padding-top: 15px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 40px 60px;
+    margin: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card.visible {
+    opacity: 1;
+}
+
+.card.basic {
+    background: linear-gradient(120deg, #d6e9ff, #a4c8ff);
+    color: black;
+}
+
+.card.premium {
+    background: linear-gradient(120deg, #4472c4, #2554a7);
+    color: white;
+}
+
+.card.platinum {
+    background: linear-gradient(120deg, #0059b3, #003366);
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card li {
+    text-align: left;
+}
+
+.price {
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+.price-btn {
+    width: 150px;
+    align-items: center;
+    background-color: #4472c4;
+    padding: 6px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.price-btn:hover {
+    background-color: #a4c8ff;
+    box-shadow: 0px 8px 14px 0px rgb(17, 48, 126);
+    color: black;
+}
+
+.price-btn:active {
+    transform: translateY(2px);
+}
+
+#pricing h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.footer {
+    border-radius: 40px 40px 0 0;
+    background-color: #d9ebf9;
+    padding: 30px 20px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer h4 {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    font-weight: bold;
+    color: #003366;
+    transition: all 0.2s ease-in-out;
+}
+
+.social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #333;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #4472c4;
+}
+
+.footer p {
+    color: rgb(0, 0, 0);
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .landing-img {
+        height: 400px;
+        object-fit: cover;
+        overflow: hidden;
+        object-position: 70%;
+    }
+
+    .title-txt {
+        font-size: 1.8rem;
+    }
+
+    .welcome-content {
+        padding: 30px 15px 40px 15px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+
+    .welcome-content h2 {
+        font-size: 1.8rem;
+        padding: 15px 0;
+    }
+
+    #pricing {
+        padding: 10px;
+    }
+
+    .card {
+        width: 90%;
+        height: 90%;
+        padding: 30px 20px;
+    }
+
+    .price {
+        padding: 0px;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+    .landing-img {
+        height: 450px;
+        object-fit: cover;
+        overflow: hidden;
+        object-position: 70%;
+    }
+
+    .title-txt {
+        font-size: 1.2rem;
+    }
+
+    .welcome-content {
+        padding: 10px 15px 40px 15px;
+    }
+
+    .welcome-content h3 {
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+
+    .welcome-content h2 {
+        font-size: 1.8rem;
+        padding: 15px 0;
+    }
+
+    .card {
+        height: 80%;
+        width: 95%;
+        padding: 20px;
+    }
+
+    .price {
+        padding: 0px;
+    }
+
+    .card li {
+        text-align: left;
+    }
+
+    #features p {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        line-height: 30px;
+    }
+
+    #features h2 {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    .carousel {
+        border-radius: 20px;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 80px;
+
+    }
+
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}

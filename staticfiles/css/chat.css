@@ -1,0 +1,173 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat+Alternates:wght@300&family=Open+Sans&family=Pacifico&family=Satisfy&display=swap');
+
+/* Common styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #898787a5;
+}
+
+/* Specific font usage */
+.createroomtext,
+#display p,
+input[type=submit] {
+    font-family: 'Merriweather', serif;
+}
+
+.chatvibe {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+
+/* Components */
+.createroomtext {
+    font-size: 1.8rem;
+    margin: 50px;
+}
+
+label {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: black;
+    font-weight: bolder;
+}
+
+.container {
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    overflow: auto;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    font-family: 'Open Sans', sans-serif;
+    float: left;
+    color: #999;
+}
+
+/* Input fields */
+input[type=text],
+select,
+input[type=submit] {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#post-form .room-text {
+    width: calc(100% - 100px);
+}
+
+#post-form .send-btn {
+    display: inline-block;
+    width: 80px;
+    margin-left: 10px;
+}
+
+div.form-container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    transition: all 0.1s ease;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 40px;
+    color: #333;
+}
+
+/* Specific to room.css */
+.container {
+    border: 2px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.darker {
+    border-color: #a7a5a5;
+    background-color: #ececec;
+    border-radius: 1px 5px 50px 5px;
+}
+
+#display b {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#display p {
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+input[type=submit] {
+    letter-spacing: 2px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+.roomname {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+}
